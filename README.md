@@ -28,5 +28,7 @@ Brug følgende guide til at installere og opsætte tomcat: https://www.digitaloc
 
 __DOG SKAL I INSTALLERE JAVA 8, OG IKKE JAVA 7 SOM GUIDEN SIGER__ 
 
+Når det hele er sat op kan i tilgå tomcat på port 8080, med det login som i angav i `tomcat-users.xml`
+
 ## Deployment
 ![peek 2018-11-14 16-39](https://user-images.githubusercontent.com/1210224/48493314-e18aae00-e82b-11e8-91fd-a3ac93033916.gif)
