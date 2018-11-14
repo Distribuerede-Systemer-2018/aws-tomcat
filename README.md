@@ -15,6 +15,18 @@ Derefter downloader i SQL dumpet til serveren `wget https://raw.githubuserconten
 
 Og indlæser det `mysql -u root -p cbsexam < sqldump.sql`
 
-Endelig skal i sørge for, at root brugeren har lov at forbinde fra andre AWS IP'er. Det gør i med følgende SQL `GRANT ALL PRIVILEGES ON *.* TO 'root'@'172.%'`
+Endelig skal lave en bruger, og give den adgang til databasen.
+```sql
+CREATE USER 'name'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON cbsexam.* TO 'name'@'%';
+```
+
+Husk at skifte `name` og `password` ud til noget der giver mere mening :)
 
 ## Tomcat
+Brug følgende guide til at installere og opsætte tomcat: https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-centos-7
+
+__DOG SKAL I INSTALLERE JAVA 8, OG IKKE JAVA 7 SOM GUIDEN SIGER__ 
+
+## Deployment
+![peek 2018-11-14 16-39](https://user-images.githubusercontent.com/1210224/48493314-e18aae00-e82b-11e8-91fd-a3ac93033916.gif)
