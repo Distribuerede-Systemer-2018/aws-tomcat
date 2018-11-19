@@ -31,4 +31,16 @@ __DOG SKAL I INSTALLERE JAVA 8, OG IKKE JAVA 7 SOM GUIDEN SIGER__
 Når det hele er sat op kan i tilgå tomcat på port 8080, med det login som i angav i `tomcat-users.xml`
 
 ## Deployment
+Først skal i tilføje et nyt artifakt til projektet, som bygger jeres kode som en .war fil:
+
 ![peek 2018-11-14 16-39](https://user-images.githubusercontent.com/1210224/48493314-e18aae00-e82b-11e8-91fd-a3ac93033916.gif)
+
+Husk at ændre i config.json så det passer til jeres mysql og solr servere på amazon. Husk at bruge interne IP'er.
+
+Hver gang i vil deploye en ny version af koden skal i bygge war filen igen via Build -> Build Artifacts -> cbsexam:war -> Build.
+
+For at deploye koden går i ind i tomcat manageren på `http://[tomcat ip]:8080/manager` og logger ind med det bruger og password i skrev i tomcat-users.xml.
+
+Under 'WAR file to deploy' uploader i jeres war fil. Derefter kan i tilgå programmet på `http://[tomcat ip]:8080/cbsexam_war`.
+
+For at uploade en ny version af koden skal i først vælge 'Undeploy' under 'applications', og defefter kan i uploade den nye .war fil.
