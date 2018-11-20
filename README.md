@@ -29,6 +29,8 @@ Lav en ny server i amazon. Security gruppen skal være åben på port 8080
 Brug følgende guide til at installere og opsætte tomcat: https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-centos-7
 Brug `wget http://mirrors.dotsrc.org/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz` til at downloade tomcat (linket i guiden virker ikke)
 
+I det skridt hvor i skal køre `sudo vi /etc/systemd/system/tomcat.service` kan i med fordel køre `sudo nano /etc/systemd/system/tomcat.service` i stedet, da nano er lidt nemmere at finde rundt i. Hvis i først er kommet ind i `vi` trykker i ESC og skriver `:wq` efterfulgt af ENTER
+
 __DOG SKAL I INSTALLERE JAVA 8, OG IKKE JAVA 7 SOM GUIDEN SIGER__ 
 
 Når det hele er sat op kan i tilgå tomcat på port 8080, med det login som i angav i `tomcat-users.xml`
