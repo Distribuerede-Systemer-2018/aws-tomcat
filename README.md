@@ -3,7 +3,7 @@
 Den burde i snart have styr på
 
 ## MySQL
-Lav en ny server i amazon. Security gruppen skal være åben på port 3306
+Lav en ny server i amazon, som kører amazon linux 2. Security gruppen skal være åben på port 3306
 
 Installer MySQL efter guiden her https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-centos-7
 I step 3 skal i ændre root passwordet, men resten kan i bare springe over.
@@ -24,7 +24,7 @@ GRANT ALL PRIVILEGES ON cbsexam.* TO 'name'@'%';
 Husk at skifte `name` og `password` ud til noget der giver mere mening :)
 
 ## Tomcat
-Lav en ny server i amazon. Security gruppen skal være åben på port 8080
+Lav en ny server i amazon, som kører amazon linux 2. Security gruppen skal være åben på port 8080
 
 Brug følgende guide til at installere og opsætte tomcat: https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-centos-7
 Brug `wget http://mirrors.dotsrc.org/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz` til at downloade tomcat (linket i guiden virker ikke)
